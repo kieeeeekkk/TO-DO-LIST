@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+   <input type="text" id="search-bar" placeholder="Search sticky notes or tools...">
+<ul id="suggestions"></ul>
+
+
+      <div id="menu-wrapper">
+  <div id="menu-scroll">
+    
+    <!-- Tasks Section -->
+    <div class="section">
+      <h3>Tasks</h3>
+      <ul>
+        <li id="upcoming-btn">📅 Upcoming</li>
+        <li id="calendar-btn" class="active">📆 Calendar</li>
+        <li id="sticky-wall-btn">🧱 Sticky Wall</li>
+      </ul>
+    </div>
+
+    <!-- Lists Section -->
+    <div class="section" id="lists-section">
+      <h3>Lists</h3>
+      <ul id="list-container">
+        <li class="list-item"><span class="color-box pink"></span> Personal</li>
+        <li class="list-item"><span class="color-box blue"></span> Work</li>
+        <li id="add-list-btn">➕ Add New List</li>
+      </ul>
+    </div>
+
+    <!-- Tags Section -->
+    <div class="section">
+      <h3>Tags</h3>
+      <div class="tags">
+        <span class="tag blue">Tag 1</span>
+        <span class="tag pink">Tag 2</span>
+        <span class="tag">+ Add Tag</span>
+      </div>
+    </div>
+
+    <!-- Settings and Sign Out -->
+    <div class="section">
+      <div id="settings-btn" class="text-link">⚙️ Settings</div>
+      <div id="signout-btn" class="text-link">🚪 Sign Out</div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+    </aside>
+
+    <!-- Calendar -->
+    <main class="calendar" id="calendar">
+      <button class="clear-all">🗑️ Clear All Events</button>
+      <div class="calendar-header">
+        <h1 id="calendar-date" style="cursor: pointer;"></h1>
+        <input type="date" id="date-picker" style="display: none;" />
+       <div class="view-options">
+  <button id="day-view">Day</button>
+  <button id="week-view">Week</button>
+  <button id="month-view">Month</button>
+</div>
+
+<button class="add-event" id="add-event-btn">+ Add Event</button>
+
+      </div>
+<div class="calendar-body">
+  <div class="time-slot" data-time="9 AM">
+    09:00 AM
+    <div class="event">Yoga Session 🧘‍♀️</div>
+  </div>
+
+  <div class="time-slot" data-time="10 AM">
+    10:00 AM
+    <div class="event">Team Meeting 👥</div>
+  </div>
+
+  <div class="time-slot" data-time="11 AM">
+    11:00 AM
+    <div class="event">Project Review 📄</div>
+  </div>
+
+  <div class="time-slot" data-time="12 PM">
+    12:00 PM
+    <div class="event">Lunch Break 🍱</div>
+  </div>
+
+  <div class="time-slot" data-time="1 PM">
+    01:00 PM
+    <div class="event">Call with Client 📞</div>
+  </div>
+
+  <div class="time-slot" data-time="2 PM">
+    02:00 PM
+    <div class="event">Design Session 🎨</div>
+  </div>
+</div>
+
+    </main>
+
+    <!-- Sticky Wall -->
+  <section class="sticky-wall hidden" id="sticky-wall">
+  <h2>Sticky Wall</h2>
+  <div class="sticky-input">
+    <textarea id="sticky-note" placeholder="Write your note..."></textarea>
+    <button id="save-note">➕ Save Note</button>
+  </div>
+  <div id="saved-notes" class="saved-notes"></div>
+</section>
+
+
+
+  <!-- Event Modal -->
+  <div id="event-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add Event</h2>
+      <input type="text" id="event-title" placeholder="Event title" />
+      <input type="time" id="event-time" />
+      <select id="event-tag">
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+      </select>
+      <button id="save-event">Save</button>
+      <button id="cancel-event">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
